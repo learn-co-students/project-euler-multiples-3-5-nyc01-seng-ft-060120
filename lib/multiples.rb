@@ -12,7 +12,7 @@ end
 
 def sum_multiples(lim)
     if !lim
-        raise ArgumentError
+        raise ArgumentError.new "Need a limit"
     end
     collect_multiples(lim).reduce(0) { |sum, num| sum+num }
 end 
