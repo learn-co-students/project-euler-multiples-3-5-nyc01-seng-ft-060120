@@ -11,5 +11,8 @@ def collect_multiples(lim)
 end
 
 def sum_multiples(lim)
+    if !lim
+        raise ArgumentError
+    end
     collect_multiples(lim).reduce(0) { |sum, num| sum+num }
 end 
